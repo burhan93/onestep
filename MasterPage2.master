@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>One_Step</title>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="StyleSheet.css" rel="stylesheet" />
+    <link href="cargrid.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<%--<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>--%>
+ 
+<%--</head>--%>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+
+     
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="logo-wrapper">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="logo" href="#">
+          <img src="Admin/Shops_Images/Logo/ost-logo-02.jpg" /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="Default.aspx">Home</a></li>
+        <li><a href="Products.aspx">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="Shops.aspx">Shops</a></li>
+        <li><a href="ContactUs.aspx">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+         
+        <li><a href="Shopkeeper.aspx"><span class="glyphicon glyphicon-user"></span> Create Shop</a></li>
+          <li><a href="Customer.aspx"><span class="glyphicon glyphicon-user"></span>Login/SignUp</a></li>
+            <li><a href="AdminPanel.aspx" ><span class="glyphicon glyphicon-user"></span>Logout</a></li>
+        <li><a href="Mycart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Cart<asp:Label id="lblCount" runat="server"></asp:Label></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+<%--<div id="carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="header/1.jpg" style="width:100%;height:580px;" alt="Abdullah Garments">
+    </div>
+    <div class="item">
+      <img src="header/2.jpg" style="width:100%;height:580px;" alt="Baby Collection">
+    </div>
+    <div class="item">
+      <img src="header/3.jpg" style="width:100%;height:580px;" alt="Pehcahn Garments">
+    </div>
+    <div class="item">
+      <img src="header/4.jpg" style="width:100%;height:380px;" alt="T-Shirts">
+    </div>
+     <hr />
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
+</div>--%>
+       
+<%--<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+    </div>
+  </div>
+</div>--%>
+         
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <footer class="container-fluid text-center">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form class="form-inline">
+                    <div class="col-md-3">Get deals:</div>
+                    <div class="col-md-6"><input type="email" class="form-control" size="50" placeholder="Email Address"></div>
+                    <div class="col-md-3"><button type="button" class="btn btn-danger">Sign Up</button></div>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="clearfix clear"></div> 
+            <hr />
+            <p> &copy;  2018 One_Step.com. All rights reserved. </p>
+            <p>onestep.aspireco@gamil.com</p>
+            <a class="go-to-top" href="#form1"><span class="glyphicon glyphicon-plane"></span></a>
+        </footer>
+        <script type="text/javascript">
+            $(window).scroll(function (e) {
+                var $el = $('.navbar-header');
+                if ($(this).scrollTop() > 100) {
+                    $('.navbar').addClass('fixed');
+                    $('.go-to-top').addClass('fixed');
+                }
+                if ($(this).scrollTop() < 100) {
+                    $('.navbar').removeClass('fixed');
+                    $('.go-to-top').removeClass('fixed');
+                }
+            });
+            // Select all links with hashes
+            $('a[href*="#"]')
+              // Remove links that don't actually link to anything
+              .not('[href="#"]')
+              .not('[href="#0"]')
+              .click(function (event) {
+                  // On-page links
+                  if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                  ) {
+                      // Figure out element to scroll to
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                      // Does a scroll target exist?
+                      if (target.length) {
+                          // Only prevent default if animation is actually gonna happen
+                          event.preventDefault();
+                          $('html, body').animate({
+                              scrollTop: target.offset().top
+                          }, 1000, function () {
+                              // Callback after animation
+                              // Must change focus!
+                              var $target = $(target);
+                              $target.focus();
+                              if ($target.is(":focus")) { // Checking if the target was focused
+                                  return false;
+                              } else {
+                                  $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                  $target.focus(); // Set focus again
+                              };
+                          });
+                      }
+                  }
+              });
+        </script>
+    </div>
+    </form>
+    </body>
+</html>
