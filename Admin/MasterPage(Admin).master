@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage(Admin).master.cs" Inherits="Admin_MasterPage_Admin_" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+  <title>One_Step</title>
+    
+  <meta charset="utf-8">
+  <%--  <link href="AdminDesign.css" rel="stylesheet" />--%>
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="DashboardStyle.css" rel="stylesheet" />
+    <link href="font_Style.css" rel="stylesheet" />
+    <link href="morris.css" rel="stylesheet" />
+    <link href="bootstrap_BinaPanel.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="custom.js"></script>
+    <script src="jquery-1.10.2.js"></script>
+    <script src="jquery.metisMenu.js"></script>
+ <%-- <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img { width: 100%; }
+  </style>--%>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+        <form id="form1"  runat="server">  
+    <div>
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">One_Step!</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <%--<li class="active"><a href="Default.aspx">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Stores</a></li>
+        <li><a href="#">Contact</a></li>--%>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+<%--          <li><span class="glyphicon glyphicon-user"> <%# Eval("Name") %></span>--%>
+              <%--<asp:Label ID="Label1" runat="server" Text=""></asp:Label>--%></li>
+<%--        <li><a href="Create_Shops.aspx"><span class="glyphicon glyphicon-user"></span> Shops</a></li>--%>
+        <li><asp:LinkButton ID="LinkButton1" OnClick="LinkButton1_Click" runat="server"><span class="glyphicon glyphicon-user"></span> LogOut</asp:LinkButton></li>   
+<%--        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>--%>
+      </ul>
+    </div>
+  </div>               
+</nav>
+       
+             <div id="wrapper"><div id="dvleft">
+       
+                    <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <img src="find_user.png" class="user-image img-responsive"/>
+					</li>
+                    <li>
+                        <a class="active-menu"  href="AdminHome.aspx"><i class="fa fa-dashboard fa-3x">
+                                                                  </i> Dashboard</a>
+                    </li>
+                     <li>
+                        <a  href="Malls.aspx"><i class="fa fa-desktop fa-3x"></i> Malls</a>
+                    </li>
+                    <li>
+                        <a  href="CreateMall.aspx"><i class="fa fa-qrcode fa-3x"></i> Create Mall</a>
+                    </li>
+						   <li  >
+                        <a   href="ShopDetail.aspx"><i class="fa fa-bar-chart-o fa-3x"></i> Shops</a>
+                    </li>	
+                      <li  >
+                        <a  href="Create_Shops.aspx"><i class="fa fa-table fa-3x"></i>Create Shops </a>
+                    </li>
+                    <li  >
+                        <a  href="ManageCategory.aspx"><i class="fa fa-edit fa-3x"></i> ManageCategory </a>
+                    </li>								                   
+                    <%--<li>
+                        <a href="#"><i class="fa fa-sitemap fa-3x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+
+                                </ul>
+                               
+                            </li>
+                        </ul>
+                      </li> --%> 
+                  <li  >
+                        <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
+                    </li>	
+                </ul>
+               
+            </div>
+            
+        </nav> 
+               </div>
+     <%--   <ul class="admin-menu">
+            <li><a href="#"> Administrator</a></li>
+            <li><a href="Malls.aspx">Malls</a>
+                    <ul class="sub-menu">
+                        <li><a href="CreateMall.aspx">Create Malls</a></li>
+                       
+                    </ul>
+            </li>
+            <li><a href="ShopDetail.aspx"> Shops</a>
+                <ul class="sub-menu">
+                        <li><a href="Create_Shops.aspx">Create Shops</a></li>
+                       
+                    </ul>
+            </li>
+            <li><a href="ManageCategory.aspx"> Categories</a></li>
+            <li><a href="#">Users</a></li>
+        </ul>--%>
+           </div>       
+        <div id="dvcentre"  >
+            
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                
+            </div>
+         </div>
+    
+    </form>
+       
+</body>
+</html>
